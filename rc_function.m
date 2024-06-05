@@ -11,7 +11,7 @@ for itemp=1:nassets
 
 
 rtemp=(W(:,end-1).*(X(:,end,itemp)))./theta_0(1,itemp);
-rtemp=rtemp-1;
+
 
 if(valatrisk < beta)
 

@@ -2,7 +2,7 @@ function [ sol_1,sol_2,sol_3,sol_4,Trajectories,WeightsD ] = generator( mu_1,Sig
 
 
 %%Input Parameters
-beta=1;
+beta=0;
 alfa=0.95;
 T=12; %% Number of stages
 Nscenarios=100000; %Number of scenarios
