@@ -30,17 +30,12 @@ C2=Y(:,end);
 
 
 
-
-[icvarq2,f12]=icvar_function( C2-1, WeightsD, beta,alfa );
-r= rc_function(W-1,X,beta,alfa,WeightsD,nassets,theta_0);
+r= rc_function(W,X,beta,alfa,WeightsD,nassets,theta_0);
 parityC=sum(r)*(1/nassets)*ones(nassets,1);
 
 f1=power(r-parityC,2);
 
-
-
-f=min(sum(r)-f12,0)-sum(f1); %%%Objective function to be maximized
-
+f=-sum(f1);
 
 
 end

@@ -2,18 +2,18 @@ function [ sol_1,sol_2,sol_3,sol_4,Trajectories,WeightsD ] = generator( mu_1,Sig
 
 
 %%Input Parameters
-beta=0;
+beta=0.2;
 alfa=0.95;
 T=12; %% Number of stages
 Nscenarios=100000; %Number of scenarios
 N=500; %Number of Clusters
-M=200; %Number of Iterations
+M=100; %Number of Iterations
 rsize=50; %Number of cloud points to calculate gradient
 Sinitial=2000; %Number of sample points to Initialize the NN Q.
 Nneuros=30; %Number of neurons of the Neural Network in each hidden layer
-eta=0.1;      %%Learning rate regarding the gradient iteration based on the formula x_{n+1}=x_{n}+eta*gradient
-lr=2;        %% Scaling factor of Gradient Descent
-subIter=20;   %% Number of iterations to updated the Scaling factor.
+eta=1;      %%Learning rate regarding the gradient iteration based on the formula x_{n+1}=x_{n}+eta*gradient
+lr=4;        %% Scaling factor of Gradient Descent
+subIter=10;   %% Number of iterations to updated the Scaling factor.
 tolerance_var=power(10,-30);  %%Tolerance for the stopping criteria. In this case the stopping criteria is determined when the norm of the gradient is less than the tolerance
 
 

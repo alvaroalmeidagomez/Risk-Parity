@@ -18,7 +18,7 @@ clc
 close all
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-weeknumber=282; %%Number of the week in the  Return_DB.csv file to solve the optimization problem
+weeknumber=206; %%Number of the week in the  Return_DB.csv file to solve the optimization problem
 
 %% Read historical data
 format long        

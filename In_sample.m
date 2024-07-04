@@ -29,6 +29,7 @@ for i=1:nIter
     vtemp=sol_1{i};
     Pall(i,:)=vtemp(1,:);
     atemp=sol_4{i};
+    atemp=1+atemp;
     RC(i,:)=atemp/sum(atemp);
 end
 
@@ -66,5 +67,4 @@ xlabel('Iteration')
 ylabel('Weights')
 legend('Asset 1','Asset 2','Asset 3','Asset 4','Asset 5','Asset 6','Asset 7','Location','bestoutside')
 title("Risk Contribution")
-
 

@@ -11,21 +11,21 @@ for itemp=1:nassets
 
 
 rtemp=(W(:,end-1).*(X(:,end,itemp)))./theta_0(1,itemp);
+rtemp=rtemp-1;
 
 
-if(valatrisk < beta)
+
+
+if(valatrisk < beta+1)
 
 
     vtemp=(valatrisk>=W(:,end)).*rtemp.*weights;
-    r(itemp,1)=(1/(1-alfa))*theta_0(1,itemp)*sum(vtemp);
+    r(itemp,1)=theta_0(1,itemp)*sum(vtemp);
 
 else
       
-
-     vtemp=(beta>=W(:,end)).*(rtemp-beta).*weights;
-     vtemp=(1/(1-alfa))*sum(vtemp);
-     r(itemp,1)=theta_0(1,itemp)*(beta+vtemp);
-
+    vtemp=(beta>=W(:,end)).*rtemp.*weights;
+    r(itemp,1)=theta_0(1,itemp)*sum(vtemp);
 end
 
 
